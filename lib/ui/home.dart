@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     return ScreenUtilInit(
-      designSize: const Size(1440, 2960),
+      designSize: const Size(411, 732),
       builder: () => MaterialApp(
         theme: ThemeData(primarySwatch: Colors.blue),
         home: Scaffold(
