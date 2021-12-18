@@ -11,7 +11,7 @@ class BorrowedBook {
   final String judul;
   final String pengarang;
   final DateTime tglPinjam;
-  final DateTime tglKembali;
+  final String tglKembali;
   final String totalDenda;
   final String fileGambar;
 
@@ -19,8 +19,7 @@ class BorrowedBook {
         judul: json["judul"],
         pengarang: json["pengarang"],
         tglPinjam: DateTime.parse(json["tgl_pinjam"]),
-        tglKembali:
-            DateTime.parse(json["tgl_kembali"] ?? DateTime.now().toString()),
+        tglKembali: json["tgl_kembali"] ?? "",
         totalDenda: json["total_denda"],
         fileGambar: json["file_gambar"],
       );
@@ -30,8 +29,7 @@ class BorrowedBook {
         "pengarang": pengarang,
         "tgl_pinjam":
             "${tglPinjam.year.toString().padLeft(4, '0')}-${tglPinjam.month.toString().padLeft(2, '0')}-${tglPinjam.day.toString().padLeft(2, '0')}",
-        "tgl_kembali":
-            "${tglKembali.year.toString().padLeft(4, '0')}-${tglKembali.month.toString().padLeft(2, '0')}-${tglKembali.day.toString().padLeft(2, '0')}",
+        "tgl_kembali": tglKembali,
         "total_denda": totalDenda,
         "file_gambar": fileGambar,
       };
