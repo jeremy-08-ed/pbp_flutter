@@ -12,3 +12,5 @@ class LoadBorrowedBooks extends BorrowedbookEvent {
 
   const LoadBorrowedBooks(this.nim);
 }
+
+class ClearBorrowedBooks extends BorrowedbookEvent {}

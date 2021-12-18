@@ -30,6 +30,8 @@ class BorrowedbookBloc extends Bloc<BorrowedbookEvent, BorrowedbookState> {
         } catch (e) {
           emit(BorrowedbookError(e.toString()));
         }
+      } else if (event is ClearBorrowedBooks) {
+        emit(BorrowedbookInitial());
       }
     });
   }
