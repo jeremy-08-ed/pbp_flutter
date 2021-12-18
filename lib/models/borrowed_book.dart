@@ -19,7 +19,8 @@ class BorrowedBook {
         judul: json["judul"],
         pengarang: json["pengarang"],
         tglPinjam: DateTime.parse(json["tgl_pinjam"]),
-        tglKembali: DateTime.parse(json["tgl_kembali"] ?? DateTime.now()),
+        tglKembali:
+            DateTime.parse(json["tgl_kembali"] ?? DateTime.now().toString()),
         totalDenda: json["total_denda"],
         fileGambar: json["file_gambar"],
       );
