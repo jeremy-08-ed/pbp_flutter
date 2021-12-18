@@ -22,7 +22,11 @@ class BookRepository {
 
       return bookContainer;
     } else {
-      throw Exception(parsedJson['message']);
+      if (response.statusCode == 500) {
+        throw Exception("Internal Server Error");
+      } else {
+        throw Exception(parsedJson['message']);
+      }
     }
   }
 }
