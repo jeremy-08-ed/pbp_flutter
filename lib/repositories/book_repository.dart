@@ -6,9 +6,9 @@ import 'dart:convert';
 import 'package:pbp_flutter/models/borrowed_container.dart';
 
 class BookRepository {
-  final EntityMapper<AvailableContainer> availableMapper;
+  final EntityMapper availableMapper;
 
-  final EntityMapper<BorrowedContainer> borrowedMapper;
+  final EntityMapper borrowedMapper;
 
   final String baseUrl = 'https://25w.000webhostapp.com';
 
