@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:pbp_flutter/models/available_book.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetail extends StatelessWidget {
-  const BookDetail({Key? key}) : super(key: key);
+  final AvailableBook book;
 
+  const BookDetail({Key? key, required this.book}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,11 +26,13 @@ class BookDetail extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.3,
-                child: const FadeInImage(
+                child: FadeInImage(
                   fit: BoxFit.cover,
-                  placeholder: AssetImage('lib/images/book_placeholder.png'),
+                  placeholder:
+                      const AssetImage('lib/images/book_placeholder.png'),
                   image: NetworkImage(
-                      "https://ichef.bbci.co.uk/news/976/cpsprodpb/E773/production/_107715295_harrypotterfirstedition-foundbyhansons.jpg"),
+                    "https://25w.000webhostapp.com/uploads/" + book.fileGambar,
+                  ),
                 ),
               ),
               Padding(
