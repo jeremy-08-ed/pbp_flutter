@@ -95,7 +95,6 @@ class _HomeState extends State<Home> {
                           Row(
                             children: [
                               SizedBox(
-
                                 height: 229,
                                 width: 162,
                                 child: Card(
