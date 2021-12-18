@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
     return ScreenUtilInit(
       designSize: const Size(411, 731),
       builder: () => MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Poppins'),
         home: Scaffold(
           body: IndexedStack(
             index: _currPage,
