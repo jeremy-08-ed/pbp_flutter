@@ -7,7 +7,7 @@ abstract class AvailablebooksState extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadingAvailableBooks extends AvailablebooksState {}
+class AvailableBooksLoading extends AvailablebooksState {}
 
 class AvailableBooksLoaded extends AvailablebooksState {
   final List<AvailableBook> books;
