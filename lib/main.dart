@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:pbp_flutter/ui/home.dart';
 import 'package:pbp_flutter/ui/splashscreen.dart';
 
+import 'bloc/availablebooks_bloc.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'BerbaringLibrary',
-      // theme: ThemeData(primarySwatch: Colors.blue),
-      debugShowCheckedModeBanner: false,
-      home: SplashScreenPage(),
+    return BlocProvider(
+      create: (context) => AvailablebooksBloc(),
+      child: const MaterialApp(
+        title: 'BerbaringLibrary',
+        // theme: ThemeData(primarySwatch: Colors.blue),
+        debugShowCheckedModeBanner: false,
+        home: SplashScreenPage(),
+      ),
     );
   }
 }
