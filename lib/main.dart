@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AvailablebooksBloc(),
-      child: const MaterialApp(
+      child: MaterialApp(
         title: 'BerbaringLibrary',
-        // theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(fontFamily: 'Poppins'),
         debugShowCheckedModeBanner: false,
         home: SplashScreenPage(),
       ),
