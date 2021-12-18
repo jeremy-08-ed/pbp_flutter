@@ -30,7 +30,9 @@ class _HomeState extends State<Home> {
                     pinned: true,
                     snap: false,
                     centerTitle: false,
-                    title: const Text('Berbaring Library'),
+                    title: Center(
+                      child: const Text('Berbaring Library'),
+                    ),
                     actions: const [],
                     bottom: AppBar(
                       title: Container(
@@ -56,6 +58,118 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
+              CustomScrollView(
+                slivers: [
+                  SliverAppBar(
+                    floating: true,
+                    pinned: true,
+                    snap: false,
+                    centerTitle: false,
+                    title: Center(
+                      child: const Text('Berbaring Library'),
+                    ),
+                    actions: const [],
+                    bottom: AppBar(
+                      title: Container(
+                        width: double.infinity,
+                        height: 40,
+                        color: Colors.white,
+                        child: const Center(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search by NIM',
+                              prefixIcon: Icon(Icons.search),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  // uncoment ini terus masukin view cardnya
+                  SliverPadding(
+                    padding: EdgeInsets.fromLTRB(29.w, 18.h, 29.w, 18.h),
+                    sliver: SliverList(
+                      delegate: SliverChildListDelegate(
+                        [
+                          Row(
+                            children: [
+                              SizedBox(
+
+                                height: 229,
+                                width: 162,
+                                child: Card(
+                                  child: Image.asset(
+                                    'lib/images/mantappu.jpg',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 14),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Judul'),
+                                      Text(
+                                          'Mantappu Jiwa (ini testing panjangnya)'),
+                                      Text('Author'),
+                                      Text('Jessica Jane'),
+                                      Text('Tanggal Pinjam'),
+                                      Text('01-01-2001'),
+                                      Text('Tanggal Kembali'),
+                                      Text('01-01-2021'),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          // Row 2
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 229,
+                                width: 162,
+                                child: Card(
+                                  child: Image.asset(
+                                    'lib/images/nkcthi.jpg',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                // padding:
+                                //     const EdgeInsets.fromLTRB(14, 0, 0, 0),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 14),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Judul'),
+                                      Text(
+                                          'Nanti Kita Cerita Tentang Hari Ini'),
+                                      Text('Author'),
+                                      Text('Raditya Dika'),
+                                      Text('Tanggal Pinjam'),
+                                      Text('01-01-2001'),
+                                      Text('Tanggal Kembali'),
+                                      Text('01-01-2021'),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -78,6 +192,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // Widget Search By Books
   Widget buildGridBooks(List<AvailableBook> books) {
     if (books.isEmpty) {
       return const Center(child: Text("No books available"));
@@ -90,12 +205,13 @@ class _HomeState extends State<Home> {
             .map(
               (book) => SizedBox(
                 //ganti view card disini
+                // height: 20,
                 child: Card(
                   child: Image.network(
                     'https://25w.000webhostapp.com/uploads/' + book.fileGambar,
-                    fit: BoxFit.cover,
-                    // width: 162.w,
                     // height: 229.h,
+                    // width: 162.w,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
@@ -104,6 +220,11 @@ class _HomeState extends State<Home> {
       );
     }
   }
+
+  // Widget Search By NIM
+  // Widget gridBooksNIM(){
+  //   return ;
+  // }
 
   void _changePage(int index) {
     setState(
