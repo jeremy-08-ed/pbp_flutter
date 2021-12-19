@@ -12,7 +12,7 @@ class BookDetail extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF409CA6),
+          backgroundColor: const Color(0xFF409CA6),
           title: const Text(
             "Book detail",
             style: TextStyle(fontWeight: FontWeight.w500),
