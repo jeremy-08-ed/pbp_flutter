@@ -11,29 +11,6 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
-  late AvailablebooksBloc availablebooksBloc;
-
-  @override
-  void initState() {
-    super.initState();
-
-    availablebooksBloc = BlocProvider.of<AvailablebooksBloc>(context);
-
-    availablebooksBloc.add(LoadAvailableBooks());
-
-    // StartSplashScreen();
-  }
-
-  //deprecated bruh stop slowing user by 3s
-  // StartSplashScreen() async {
-  //   var duration = const Duration(milliseconds: 3000);
-  //   return Timer(duration, () {
-  //     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) {
-  //       return const Home();
-  //     }));
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     var screenwidth = MediaQuery.of(context).size.width;
@@ -41,11 +18,15 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return BlocListener<AvailablebooksBloc, AvailablebooksState>(
       listener: (context, state) {
         if (state is AvailableBooksLoaded) {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) {
-            return Home(
-              books: [...state.books],
-            );
-          }));
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) {
+                return Home(
+                  books: [...state.books],
+                );
+              },
+            ),
+          );
         } else if (state is AvailableBooksError) {
           final snackBar = SnackBar(content: Text(state.error));
           ScaffoldMessenger.of(context).showSnackBar(snackBar);

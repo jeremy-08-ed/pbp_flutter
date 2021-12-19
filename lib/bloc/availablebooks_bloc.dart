@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:pbp_flutter/mappers/available_mapper.dart';
+import 'package:pbp_flutter/mappers/borrowed_mapper.dart';
 import 'package:pbp_flutter/models/available_book.dart';
 import 'package:pbp_flutter/models/available_container.dart';
 import 'package:pbp_flutter/repositories/book_repository.dart';
@@ -10,12 +11,15 @@ part 'availablebooks_state.dart';
 
 class AvailablebooksBloc
     extends Bloc<AvailablebooksEvent, AvailablebooksState> {
-  BookRepository bookRepository = BookRepository(AvailableMapper());
+  BookRepository bookRepository =
+      BookRepository(AvailableMapper(), BorrowedMapper());
 
-  AvailablebooksBloc() : super(LoadingAvailableBooks()) {
+  AvailablebooksBloc() : super(AvailableBooksLoading()) {
     on<AvailablebooksEvent>(
       (event, emit) async {
         if (event is LoadAvailableBooks) {
+          emit(AvailableBooksLoading());
+
           try {
             final AvailableContainer container =
                 await bookRepository.getListBooks();
