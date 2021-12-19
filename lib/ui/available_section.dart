@@ -92,12 +92,18 @@ class _AvailableSectionState extends State<AvailableSection> {
                     builder: (context) => BookDetail(book: book),
                   ),
                 ),
-                child: Card(
-                  child: Image.network(
-                    'https://25w.000webhostapp.com/uploads/' + book.fileGambar,
-                    // height: 229.h,
-                    // width: 162.w,
-                    fit: BoxFit.cover,
+                child: Hero(
+                  tag: book.isbn,
+                  child: Card(
+                    child: FadeInImage(
+                      fit: BoxFit.cover,
+                      placeholder:
+                          const AssetImage('lib/images/book_placeholder.png'),
+                      image: NetworkImage(
+                        "https://25w.000webhostapp.com/uploads/" +
+                            book.fileGambar,
+                      ),
+                    ),
                   ),
                 ),
               ),
