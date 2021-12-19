@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter/models/available_book.dart';
+import 'package:berbaring_library/models/available_book.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetail extends StatelessWidget {
@@ -12,7 +12,7 @@ class BookDetail extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF409CA6),
+          backgroundColor: const Color(0xFF409CA6),
           title: const Text(
             "Book detail",
             style: TextStyle(fontWeight: FontWeight.w500),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pbp_flutter/bloc/borrowedbook_bloc.dart';
-import 'package:pbp_flutter/models/borrowed_book.dart';
+import 'package:berbaring_library/bloc/borrowedbook_bloc.dart';
+import 'package:berbaring_library/models/borrowed_book.dart';
 import 'package:intl/intl.dart';
 
 class BorrowedSection extends StatefulWidget {
@@ -31,15 +31,15 @@ class _BorrowedSectionState extends State<BorrowedSection> {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          backgroundColor: Color(0xFF409CA6),
+          backgroundColor: const Color(0xFF409CA6),
           floating: true,
           pinned: true,
           snap: false,
           centerTitle: false,
-          title: Text('Berbaring Library'),
+          title: const Text('Berbaring Library'),
           actions: const [],
           bottom: AppBar(
-            backgroundColor: Color(0xFF409CA6),
+            backgroundColor: const Color(0xFF409CA6),
             title: Container(
               width: double.infinity,
               height: 40,
@@ -141,7 +141,7 @@ class BookItem extends StatelessWidget {
                 const Text('Judul'),
                 Text(
                   book.judul,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     color: Color(0xFFA0A0A0),
                   ),
@@ -152,7 +152,7 @@ class BookItem extends StatelessWidget {
                 const Text('Author'),
                 Text(
                   book.pengarang,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     color: Color(0xFFA0A0A0),
                   ),
@@ -163,7 +163,7 @@ class BookItem extends StatelessWidget {
                 const Text('Tanggal Pinjam'),
                 Text(
                   DateFormat('dd-MM-yyyy').format(book.tglPinjam),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     color: Color(0xFFA0A0A0),
                   ),
@@ -174,7 +174,7 @@ class BookItem extends StatelessWidget {
                 Text((book.tglKembali.isNotEmpty) ? 'Tanggal Kembali' : ''),
                 Text(
                   book.tglKembali,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     color: Color(0xFFA0A0A0),
                   ),

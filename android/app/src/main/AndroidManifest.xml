@@ -3,7 +3,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="pbp_flutter"
+        android:label="Berbaring Library"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

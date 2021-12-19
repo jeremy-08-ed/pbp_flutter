@@ -1,6 +1,6 @@
-import 'package:pbp_flutter/mappers/entity_mapper.dart';
-import 'package:pbp_flutter/models/borrowed_book.dart';
-import 'package:pbp_flutter/models/borrowed_container.dart';
+import 'package:berbaring_library/mappers/entity_mapper.dart';
+import 'package:berbaring_library/models/borrowed_book.dart';
+import 'package:berbaring_library/models/borrowed_container.dart';
 
 class BorrowedMapper extends EntityMapper<BorrowedContainer> {
   @override

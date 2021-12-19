@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pbp_flutter/bloc/borrowedbook_bloc.dart';
-import 'package:pbp_flutter/ui/splashscreen.dart';
+import 'package:berbaring_library/bloc/borrowedbook_bloc.dart';
+import 'package:berbaring_library/ui/splashscreen.dart';
 
 import 'bloc/availablebooks_bloc.dart';
 

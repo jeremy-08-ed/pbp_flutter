@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter/models/available_book.dart';
-import 'package:pbp_flutter/ui/book_detail.dart';
+import 'package:berbaring_library/models/available_book.dart';
+import 'package:berbaring_library/ui/book_detail.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AvailableSection extends StatefulWidget {
@@ -16,20 +16,27 @@ class _AvailableSectionState extends State<AvailableSection> {
   final TextEditingController _bookNameController = TextEditingController();
 
   final List<AvailableBook> _searchResult = [];
+
+  @override
+  void dispose() {
+    super.dispose();
+    _bookNameController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          backgroundColor: Color(0xFF409CA6),
+          backgroundColor: const Color(0xFF409CA6),
           floating: true,
           pinned: true,
           snap: false,
           centerTitle: false,
-          title: Text('Berbaring Library'),
+          title: const Text('Berbaring Library'),
           actions: const [],
           bottom: AppBar(
-            backgroundColor: Color(0xFF409CA6),
+            backgroundColor: const Color(0xFF409CA6),
             title: Container(
               width: double.infinity,
               height: 40,
@@ -80,7 +87,7 @@ class _AvailableSectionState extends State<AvailableSection> {
       return const Center(child: Text("No books available"));
     } else {
       return SliverGrid.count(
-        childAspectRatio: 162.w/229.h,
+        childAspectRatio: 162.w / 229.h,
         crossAxisSpacing: 29.w,
         mainAxisSpacing: 18.h,
         crossAxisCount: 2,
