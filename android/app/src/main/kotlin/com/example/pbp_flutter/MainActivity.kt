@@ -1,4 +1,4 @@
-package com.example.pbp_flutter
+package com.pbp.berbaringlibrary
 
 import io.flutter.embedding.android.FlutterActivity
 

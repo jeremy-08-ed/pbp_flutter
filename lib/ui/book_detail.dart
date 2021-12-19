@@ -6,11 +6,11 @@ class BookDetail extends StatelessWidget {
   final AvailableBook book;
 
   const BookDetail({Key? key, required this.book}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(fontFamily: 'Poppins'),
-      home: Scaffold(
+    return SafeArea(
+      child: Scaffold(
         appBar: AppBar(
           title: const Text(
             "Book detail",
@@ -23,15 +23,19 @@ class BookDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: FadeInImage(
-                  fit: BoxFit.cover,
-                  placeholder:
-                      const AssetImage('lib/images/book_placeholder.png'),
-                  image: NetworkImage(
-                    "https://25w.000webhostapp.com/uploads/" + book.fileGambar,
+              Hero(
+                tag: book.isbn,
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: 260.h,
+                  child: FadeInImage(
+                    fit: BoxFit.cover,
+                    placeholder:
+                        const AssetImage('lib/images/book_placeholder.png'),
+                    image: NetworkImage(
+                      "https://25w.000webhostapp.com/uploads/" +
+                          book.fileGambar,
+                    ),
                   ),
                 ),
               ),
@@ -43,10 +47,10 @@ class BookDetail extends StatelessWidget {
                   children: [
                     Container(
                       margin: const EdgeInsets.only(bottom: 10),
-                      child: const Text(
-                        "Book Title",
+                      child: Text(
+                        book.judul,
                         style: TextStyle(
-                          fontSize: 27,
+                          fontSize: 24.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -58,21 +62,19 @@ class BookDetail extends StatelessWidget {
                       },
                       children: [
                         TableRow(
-                          children: _descriptionText("Author", "Author value"),
+                          children: _descriptionText("Author", book.pengarang),
                         ),
                         TableRow(
-                          children: _descriptionText("ISBN", "ISBN value"),
+                          children: _descriptionText("ISBN", book.isbn),
                         ),
                         TableRow(
-                          children:
-                              _descriptionText("Kategori", "Kategori value"),
+                          children: _descriptionText("Kategori", book.nama),
                         ),
                         TableRow(
-                          children:
-                              _descriptionText("Penerbit", "Penerbit value"),
+                          children: _descriptionText("Penerbit", book.penerbit),
                         ),
                         TableRow(
-                          children: _descriptionText("Stok", "Stok value"),
+                          children: _descriptionText("Stok", book.stok),
                         ),
                       ],
                     ),
@@ -92,21 +94,21 @@ class BookDetail extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 5),
         child: Text(
           label,
-          style: const TextStyle(
-            fontSize: 15,
+          style: TextStyle(
+            fontSize: 18.sp,
           ),
         ),
       ),
-      const Text(
+      Text(
         ":",
         style: TextStyle(
-          fontSize: 17,
+          fontSize: 18.sp,
         ),
       ),
       Text(
         value,
-        style: const TextStyle(
-          fontSize: 17,
+        style: TextStyle(
+          fontSize: 18.sp,
         ),
       ),
     ];
