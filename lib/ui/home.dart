@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
               label: "Search by Book",
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.hourglass_full), label: "Search by NIM"),
+                icon: Icon(Icons.format_list_numbered), label: "Search by NIM"),
           ],
           currentIndex: _currPage,
           selectedItemColor: Colors.green,
