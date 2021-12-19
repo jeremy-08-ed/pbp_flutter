@@ -1,16 +1,9 @@
-# pbp_flutter
+# Berbaring Library
 
-A new Flutter project.
+Tugas Besar Mata Kuliah Pengembangan Berbasis Platform 2021
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Muhammad Afif Azizy 24060119120011  
+Muhammad Fatkhu Rohman 24060119130055  
+Muhammad Rayhan Magnifica 24060119130065  
+Robertus Agung Setiawan 24060119130067  
+Jeremy Edbert Widjaja 24060119130071
