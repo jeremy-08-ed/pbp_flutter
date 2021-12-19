@@ -31,15 +31,15 @@ class _BorrowedSectionState extends State<BorrowedSection> {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+          backgroundColor: Color(0xFF409CA6),
           floating: true,
           pinned: true,
           snap: false,
           centerTitle: false,
-          title: const Center(
-            child: Text('Berbaring Library'),
-          ),
+          title: Text('Berbaring Library'),
           actions: const [],
           bottom: AppBar(
+            backgroundColor: Color(0xFF409CA6),
             title: Container(
               width: double.infinity,
               height: 40,
@@ -139,13 +139,46 @@ class BookItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text('Judul'),
-                Text(book.judul),
+                Text(
+                  book.judul,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Color(0xFFA0A0A0),
+                  ),
+                ),
+                SizedBox(
+                  height: 6.h,
+                ),
                 const Text('Author'),
-                Text(book.pengarang),
+                Text(
+                  book.pengarang,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Color(0xFFA0A0A0),
+                  ),
+                ),
+                SizedBox(
+                  height: 6.h,
+                ),
                 const Text('Tanggal Pinjam'),
-                Text(DateFormat('dd-MM-yyyy').format(book.tglPinjam)),
+                Text(
+                  DateFormat('dd-MM-yyyy').format(book.tglPinjam),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Color(0xFFA0A0A0),
+                  ),
+                ),
+                SizedBox(
+                  height: 6.h,
+                ),
                 Text((book.tglKembali.isNotEmpty) ? 'Tanggal Kembali' : ''),
-                Text(book.tglKembali),
+                Text(
+                  book.tglKembali,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Color(0xFFA0A0A0),
+                  ),
+                ),
               ],
             ),
           ),

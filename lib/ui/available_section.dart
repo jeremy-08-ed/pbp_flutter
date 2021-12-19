@@ -21,15 +21,15 @@ class _AvailableSectionState extends State<AvailableSection> {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+          backgroundColor: Color(0xFF409CA6),
           floating: true,
           pinned: true,
           snap: false,
           centerTitle: false,
-          title: const Center(
-            child: Text('Berbaring Library'),
-          ),
+          title: Text('Berbaring Library'),
           actions: const [],
           bottom: AppBar(
+            backgroundColor: Color(0xFF409CA6),
             title: Container(
               width: double.infinity,
               height: 40,
@@ -80,6 +80,7 @@ class _AvailableSectionState extends State<AvailableSection> {
       return const Center(child: Text("No books available"));
     } else {
       return SliverGrid.count(
+        childAspectRatio: 162.w/229.h,
         crossAxisSpacing: 29.w,
         mainAxisSpacing: 18.h,
         crossAxisCount: 2,
