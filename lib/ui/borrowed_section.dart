@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pbp_flutter/bloc/borrowedbook_bloc.dart';
-import 'package:pbp_flutter/models/borrowed_book.dart';
+import 'package:berbaring_library/bloc/borrowedbook_bloc.dart';
+import 'package:berbaring_library/models/borrowed_book.dart';
 import 'package:intl/intl.dart';
 
 class BorrowedSection extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter/models/available_book.dart';
-import 'package:pbp_flutter/ui/available_section.dart';
-import 'package:pbp_flutter/ui/borrowed_section.dart';
+import 'package:berbaring_library/models/available_book.dart';
+import 'package:berbaring_library/ui/available_section.dart';
+import 'package:berbaring_library/ui/borrowed_section.dart';
 
 class Home extends StatefulWidget {
   final List<AvailableBook> books;

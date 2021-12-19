@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:pbp_flutter/mappers/available_mapper.dart';
-import 'package:pbp_flutter/mappers/borrowed_mapper.dart';
-import 'package:pbp_flutter/models/borrowed_book.dart';
-import 'package:pbp_flutter/models/borrowed_container.dart';
-import 'package:pbp_flutter/repositories/book_repository.dart';
+import 'package:berbaring_library/mappers/available_mapper.dart';
+import 'package:berbaring_library/mappers/borrowed_mapper.dart';
+import 'package:berbaring_library/models/borrowed_book.dart';
+import 'package:berbaring_library/models/borrowed_container.dart';
+import 'package:berbaring_library/repositories/book_repository.dart';
 
 part 'borrowedbook_event.dart';
 part 'borrowedbook_state.dart';

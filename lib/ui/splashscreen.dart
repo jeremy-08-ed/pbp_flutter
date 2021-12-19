@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pbp_flutter/bloc/availablebooks_bloc.dart';
-import 'package:pbp_flutter/ui/home.dart';
+import 'package:berbaring_library/bloc/availablebooks_bloc.dart';
+import 'package:berbaring_library/ui/home.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenPage extends StatefulWidget {

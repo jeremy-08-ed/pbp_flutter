@@ -1,9 +1,9 @@
 import 'package:http/http.dart' as http;
-import 'package:pbp_flutter/mappers/entity_mapper.dart';
-import 'package:pbp_flutter/models/available_container.dart';
+import 'package:berbaring_library/mappers/entity_mapper.dart';
+import 'package:berbaring_library/models/available_container.dart';
 import 'dart:convert';
 
-import 'package:pbp_flutter/models/borrowed_container.dart';
+import 'package:berbaring_library/models/borrowed_container.dart';
 
 class BookRepository {
   final EntityMapper availableMapper;

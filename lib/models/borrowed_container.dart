@@ -1,5 +1,5 @@
-import 'package:pbp_flutter/models/book_container.dart';
-import 'package:pbp_flutter/models/borrowed_book.dart';
+import 'package:berbaring_library/models/book_container.dart';
+import 'package:berbaring_library/models/borrowed_book.dart';
 
 class BorrowedContainer extends BookContainer<BorrowedBook> {
   BorrowedContainer({status, message, data})

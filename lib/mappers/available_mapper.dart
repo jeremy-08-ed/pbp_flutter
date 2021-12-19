@@ -1,6 +1,6 @@
-import 'package:pbp_flutter/mappers/entity_mapper.dart';
-import 'package:pbp_flutter/models/available_book.dart';
-import 'package:pbp_flutter/models/available_container.dart';
+import 'package:berbaring_library/mappers/entity_mapper.dart';
+import 'package:berbaring_library/models/available_book.dart';
+import 'package:berbaring_library/models/available_container.dart';
 
 class AvailableMapper extends EntityMapper<AvailableContainer> {
   @override

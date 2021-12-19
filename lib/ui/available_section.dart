@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter/models/available_book.dart';
-import 'package:pbp_flutter/ui/book_detail.dart';
+import 'package:berbaring_library/models/available_book.dart';
+import 'package:berbaring_library/ui/book_detail.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AvailableSection extends StatefulWidget {
